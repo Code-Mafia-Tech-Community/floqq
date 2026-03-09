@@ -36,7 +36,7 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-semibold text-primary-foreground glow-primary transition-all hover:brightness-110">
+          <button onClick={() => navigate("/create")} className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-semibold text-primary-foreground glow-primary transition-all hover:brightness-110">
             Start Creating
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </button>
