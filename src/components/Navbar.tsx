@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Cpu, GitBranch, Layers, Sparkles, Zap, Box } from "lucide-react";
+import { GitBranch } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const navItems = ["Features", "How it Works", "Pricing"];
 
-const Navbar = () => (
+const Navbar = () => {
+  const navigate = useNavigate();
+  return (
   <motion.nav
     initial={{ y: -20, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
@@ -21,11 +24,12 @@ const Navbar = () => (
           </a>
         ))}
       </div>
-      <button className="rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground glow-primary transition-all hover:brightness-110">
+      <button onClick={() => navigate("/create")} className="rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground glow-primary transition-all hover:brightness-110">
         Get Started
       </button>
     </div>
   </motion.nav>
-);
+  );
+};
 
 export default Navbar;

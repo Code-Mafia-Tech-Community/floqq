@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
-const Hero = () => (
+const Hero = () => {
+  const navigate = useNavigate();
+  return (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
     {/* Background effects */}
     <div className="absolute inset-0 gradient-mesh" />
@@ -33,7 +36,7 @@ const Hero = () => (
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-semibold text-primary-foreground glow-primary transition-all hover:brightness-110">
+          <button onClick={() => navigate("/create")} className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-semibold text-primary-foreground glow-primary transition-all hover:brightness-110">
             Start Creating
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </button>
@@ -54,7 +57,8 @@ const Hero = () => (
       </motion.div>
     </div>
   </section>
-);
+  );
+};
 
 const DiagramPreview = () => (
   <div className="glass rounded-2xl p-8 relative overflow-hidden">

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const steps = [
   { step: "01", title: "Describe", desc: "Type what you want to visualize in plain language." },
@@ -42,7 +43,9 @@ const HowItWorks = () => (
   </section>
 );
 
-const CTA = () => (
+const CTA = () => {
+  const navigate = useNavigate();
+  return (
   <section className="relative py-32">
     <div className="container mx-auto px-6">
       <motion.div
@@ -59,7 +62,7 @@ const CTA = () => (
           <p className="text-muted-foreground text-lg mb-8 max-w-lg mx-auto">
             Join thousands of developers visualizing their architecture with AI.
           </p>
-          <button className="group inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-semibold text-primary-foreground glow-primary transition-all hover:brightness-110">
+          <button onClick={() => navigate("/create")} className="group inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-semibold text-primary-foreground glow-primary transition-all hover:brightness-110">
             Get Started Free
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </button>
@@ -67,7 +70,8 @@ const CTA = () => (
       </motion.div>
     </div>
   </section>
-);
+  );
+};
 
 const Footer = () => (
   <footer className="border-t border-border py-12">
