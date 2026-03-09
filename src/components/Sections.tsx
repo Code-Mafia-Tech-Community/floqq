@@ -43,7 +43,9 @@ const HowItWorks = () => (
   </section>
 );
 
-const CTA = () => (
+const CTA = () => {
+  const navigate = useNavigate();
+  return (
   <section className="relative py-32">
     <div className="container mx-auto px-6">
       <motion.div
