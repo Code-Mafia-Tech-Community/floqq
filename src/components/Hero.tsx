@@ -57,7 +57,8 @@ const Hero = () => {
       </motion.div>
     </div>
   </section>
-);
+  );
+};
 
 const DiagramPreview = () => (
   <div className="glass rounded-2xl p-8 relative overflow-hidden">
