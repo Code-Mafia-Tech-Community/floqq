@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const Hero = () => (
+const Hero = () => {
+  const navigate = useNavigate();
+  return (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
     {/* Background effects */}
     <div className="absolute inset-0 gradient-mesh" />
