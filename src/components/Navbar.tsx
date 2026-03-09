@@ -24,11 +24,12 @@ const Navbar = () => {
           </a>
         ))}
       </div>
-      <button className="rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground glow-primary transition-all hover:brightness-110">
+      <button onClick={() => navigate("/create")} className="rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground glow-primary transition-all hover:brightness-110">
         Get Started
       </button>
     </div>
   </motion.nav>
-);
+  );
+};
 
 export default Navbar;
