@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 const navItems = ["Features", "How it Works", "Pricing"];
 
-const Navbar = () => (
+const Navbar = () => {
+  const navigate = useNavigate();
+  return (
   <motion.nav
     initial={{ y: -20, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
