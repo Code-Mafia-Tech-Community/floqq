@@ -62,7 +62,7 @@ const CTA = () => {
           <p className="text-muted-foreground text-lg mb-8 max-w-lg mx-auto">
             Join thousands of developers visualizing their architecture with AI.
           </p>
-          <button className="group inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-semibold text-primary-foreground glow-primary transition-all hover:brightness-110">
+          <button onClick={() => navigate("/create")} className="group inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-semibold text-primary-foreground glow-primary transition-all hover:brightness-110">
             Get Started Free
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </button>
@@ -70,7 +70,8 @@ const CTA = () => {
       </motion.div>
     </div>
   </section>
-);
+  );
+};
 
 const Footer = () => (
   <footer className="border-t border-border py-12">
