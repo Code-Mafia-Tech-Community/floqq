@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Cpu, GitBranch, Layers, Sparkles, Zap, Box } from "lucide-react";
+import { GitBranch } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const navItems = ["Features", "How it Works", "Pricing"];
 
